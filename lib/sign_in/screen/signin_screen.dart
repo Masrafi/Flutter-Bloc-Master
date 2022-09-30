@@ -55,7 +55,7 @@ class SigninScreen extends StatelessWidget {
                 height: 10,
               ),
               TextField(
-                controller: emailController,
+                controller: passwordController,
                 onChanged: (val) {
                   BlocProvider.of<SignInBloc>(context).add(
                       SignInTextChangeEvent(
@@ -76,10 +76,16 @@ class SigninScreen extends StatelessWidget {
                     onPressed: () {
                       if (state is SignInValidState) {
                         BlocProvider.of<SignInBloc>(context).add(
-                            SignInSubmittedEvent(
-                                emailController.text, passwordController.text));
+                          SignInSubmittedEvent(
+                            emailController.text,
+                            passwordController.text,
+                          ),
+                        );
+                        Navigator.pushNamed(context, '/internet', arguments: {
+                          "title": emailController.text,
+                          "pass": passwordController.text
+                        });
                       }
-
                     },
                     color:
                         (state is SignInValidState) ? Colors.blue : Colors.grey,
