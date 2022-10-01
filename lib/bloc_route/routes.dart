@@ -4,8 +4,10 @@ import 'package:log_registration_bloc/sign_up/bloc/signup_bloc.dart';
 import 'package:log_registration_bloc/sign_up/screen/signup_screen.dart';
 import 'package:log_registration_bloc/sign_up/screen/view_data.dart';
 import 'package:log_registration_bloc/welcome_screen.dart';
-
-import '../internet/bloc/internet_cubit.dart';
+import '../data_get_api/repository/repository.dart';
+import '../data_get_api/screen/api_home_screen.dart';
+import '../data_get_api/screen/view_data.dart';
+import '../internet/bloc_cubit/internet_cubit.dart';
 import '../internet/screen/internet_home.dart';
 import '../sign_in/bloc/signin_bloc.dart';
 import '../sign_in/screen/signin_screen.dart';
@@ -56,6 +58,23 @@ class Routes {
             lname: arguments["lname"],
             email: arguments["email"],
             pass: arguments["pass"],
+          ),
+        );
+
+      case "/apihome":
+        return MaterialPageRoute(
+          builder: (context) => RepositoryProvider(
+            create: (context) => Repository(),
+            child: ApiHomeScreen(),
+          ),
+        );
+
+      case "/viewdataAPI":
+        Map<String, dynamic> arguments =
+            settings.arguments as Map<String, dynamic>;
+        return MaterialPageRoute(
+          builder: (context) => ViewDataAPI(
+            model: arguments['model'],
           ),
         );
 

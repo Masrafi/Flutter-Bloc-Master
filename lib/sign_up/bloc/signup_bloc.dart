@@ -15,7 +15,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       } else if (event.passValue.length <= 7) {
         emit(SignUpErrorState("Enter valid password"));
       } else {
-        emit(SignUpValidlState());
+        emit(SignUpValideState());
       }
     });
     on<SignUpTextSubmitEvent>((event, emit) {

@@ -39,6 +39,7 @@ dependencies:
   equatable:
   email_validator: ^2.1.17
   connectivity:
+  dio:
 
 dev_dependencies:
   flutter_test:

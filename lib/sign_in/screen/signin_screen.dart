@@ -85,6 +85,12 @@ class SigninScreen extends StatelessWidget {
                           "title": emailController.text,
                           "pass": passwordController.text
                         });
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('TextField is empty'),
+                          ),
+                        );
                       }
                     },
                     color:

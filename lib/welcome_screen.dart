@@ -35,6 +35,19 @@ class Welcome extends StatelessWidget {
             ),
           ),
           const SizedBox(
+            height: 20.0,
+          ),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/apihome");
+              },
+              child: const Text(
+                "API data get",
+              ),
+            ),
+          ),
+          const SizedBox(
             height: 10.0,
           ),
         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../bloc/internet_cubit.dart';
+
+import '../bloc_cubit/internet_cubit.dart';
 
 class InternetHome extends StatefulWidget {
   final String email, pass;
