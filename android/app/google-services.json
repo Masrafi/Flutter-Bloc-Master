@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "811668748344",
+    "project_id": "bloc-master-9bb19",
+    "storage_bucket": "bloc-master-9bb19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811668748344:android:11eb56b89cd6dc7d93cecd",
+        "android_client_info": {
+          "package_name": "com.example.log_registration_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811668748344-edeu0rg1oddap6v9n6otf54vuucs4nbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9gOY1KKk0N_XKzTwkU9UmTOYJ1zqNSz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811668748344-edeu0rg1oddap6v9n6otf54vuucs4nbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

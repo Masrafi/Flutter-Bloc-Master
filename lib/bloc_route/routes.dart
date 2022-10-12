@@ -7,6 +7,8 @@ import 'package:log_registration_bloc/welcome_screen.dart';
 import '../data_get_api/repository/repository.dart';
 import '../data_get_api/screen/api_home_screen.dart';
 import '../data_get_api/screen/view_data.dart';
+import '../http_post/repo/product_repo.dart';
+import '../http_post/screen/datafield_check.dart';
 import '../internet/bloc_cubit/internet_cubit.dart';
 import '../internet/screen/internet_home.dart';
 import '../sign_in/bloc/signin_bloc.dart';
@@ -75,6 +77,14 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => ViewDataAPI(
             model: arguments['model'],
+          ),
+        );
+
+      case "/httppost":
+        return MaterialPageRoute(
+          builder: (context) => RepositoryProvider(
+            create: (context) => ProductRepository(),
+            child: HttpCheck(),
           ),
         );
 
