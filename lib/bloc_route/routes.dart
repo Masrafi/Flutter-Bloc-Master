@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:log_registration_bloc/http_post/bloc/app_bloc.dart';
 import 'package:log_registration_bloc/sign_up/bloc/signup_bloc.dart';
 import 'package:log_registration_bloc/sign_up/screen/signup_screen.dart';
 import 'package:log_registration_bloc/sign_up/screen/view_data.dart';
@@ -87,6 +88,14 @@ class Routes {
             child: HttpCheck(),
           ),
         );
+
+      // case "/calldata":
+      //   return MaterialPageRoute(
+      //     builder: (context) => BlocProvider(
+      //       create: (context) => ProductBloc(productRepository: ),
+      //       child: SignUpScreen(),
+      //     ),
+      //   );
 
       default:
         return null;

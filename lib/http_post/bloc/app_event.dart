@@ -12,3 +12,8 @@ class Create extends ProductEvent {
 
   Create(this.name, this.price);
 }
+
+//get
+class GetData extends ProductEvent {
+  GetData();
+}
